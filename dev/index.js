@@ -1,117 +1,14 @@
 //
 require(["js/config"], function(m){
 	//写出页面需要的所有模块，不用考虑顺序问题
-	require(["jquery","textModel","common","fixedValue","animate"], function($){
+	require(["jquery","headNav","textModel","common","fixedValue","animate"], function($,headnav){
 		$(function(){
-/*-----------------------搜索框-----------------------*/			
-			//添加热搜，当鼠标点击，但是不输入内容时，显示热搜内容，当开始输入时，热搜内容消失。当不输入内容超过5秒后，热搜消失，输入框失去焦点
-			$("#search").click(function(){
-				var searchVal = $("#search").val();
-				if(searchVal == ""){
-					$("#hotSearch ul").css({display :"block"});
-					setTimeout(function(){
-						$("#search").blur();
-						$("#hotSearch ul").css({display :"none"});
-					},5000)	
-				}else{
-					$("#hotSearch ul").css({display :"none"});
-				}
-			})
-			$("#search").blur(function(){
-				$("#hotSearch ul").css({display :"none"});
-			})
-			
-			//点击输入框，输入内容，完成自动填充功能
-			$("#search").keyup(function(e){
-				var searchVal = $("#search").val();
-				jsonp("http://suggestion.baidu.com/su?wd="+searchVal+"&cb=test");
-				//点击自动完成的列表，列表消失，输入框变成点击的内容
-				$("#searchUl").click(
-					function(e){
-						if(e.target.nodeName == "A"){
-							var clickVal = e.target.innerHTML;	
-							$("#search").val(clickVal);
-							$("#searchUl ul").css({display:"none"});
-						}
-					}
-				)					
-				if(searchVal == ""){			//判断搜索框是否为空，当为空时显示热搜框
-					$("#hotSearch ul").css({display :"block"});
-				}else{
-					$("#hotSearch ul").css({display :"none"});
-				}
-				setTimeout(function(){			//5秒内用户没有点击列表框，列表消失
-					$("#searchUl ul").css({display:"none"});
-				},5000)
-				
-			})
-			
-			
-			window.test=function(urlData){			//在该函数中清除之前产生的script，因为到这里数据已经通过urlData获取到了；
-				var oul = document.getElementById("searchUl");
-				oul.innerHTML=template("mode",urlData.s);
-				oul.children[0].style.display = "block";
-				var _s = document.getElementById("_sicipt_self_use");
-				_s.remove();	
-			}
-			
-			function jsonp(url){
-				var _script = document.createElement("script");
-				_script.src = url;
-				_script.id = "_sicipt_self_use";
-				document.body.appendChild(_script);
-			}
-			
-			
-			
-			
-/*---------------------搜索按钮-------bug--------------*/			
-			$("#searchBtn").click(function(){
-				var xhr = new XMLHttpRequest();
-				xhr.open("GET","http://localhost:8080/dev/index.html",true);
-				xhr.send();
-			})
-/*-------------------------购物车----------------------------------*/			
-			$("#shopCar,.goodsNum").hover(
-				function(){
-					var goodsNum = $(".goodsNum").text();
-					if(goodsNum == 0){								//当购物车为空时
-						$(".carList").css({display:"block"});
-						setTimeout(function(){
-							$(".carList").html("购物车里面暂时没有商品");
-						},300)						
-					}else{											//当购物车不为空
-						
-						
-					}
-				},
-				function(){
-					$(".carList").css({display:"none"});
-					
-				}
-			)
-/*---------------------------登录与注册--------------------------------------*/			
-/*---------------------------nav：hover状态下显示list-------------------------*/			
-			$(".nav ul li:not(.specialPage)").hover(function(){
-				$(".navList").css({display:"block"});
-				$(this).find(".Lichild").css({display:"block"});
-			},
-			function(){
-				$this = $(this);
-				if($(".navList").is(":hover")){
-					$(".navList").css({display:"block"});
-					$(this).find(".Lichild").css({display:"block"});
-					$(".navList").mouseout(function(){
-						$(".navList").css({display:"none"});
-						$this.find(".Lichild").css({display:"none"});
-					})
-				}else{
-					$(".navList").css({display:"none"});
-					$(this).find(".Lichild").css({display:"none"});
-					
-				}
-				
-			})
+			$("#headNav").load("html/head.html",function(){			//load的回调函数，因为使用load会使先加载js代码，然后加载页面，所以在这里使用回调函数保证先加载页面再加载js代码，回调函数里是暴露的借口（使用define）
+				headnav.headAndNav();
+			});
+			$("#keyDiv").load("html/key.html",function(){
+			//fixed没有用 js 代码
+			});
 /*-------------------------banner-----------------------------------------------*/
 			var bannerIndex = 0;
 			var ulLength = $(".imglist li").length;
@@ -183,18 +80,7 @@ $(".ul_dot li").on("click",function(){
 				$this.find("div").stop().animate({bottom:"-55px",opacity:0},300);
 			})
 			
-/*-----------------------------鼠标滚动，头部和导航固定到顶部------------------------------*/			
-			$(window).scroll(function(){
-				//console.log($(".head").scrollTop());
-				if($(document.body).scrollTop() > 0){
-					$(".head").addClass("headforfixed");
-					$(".nav").addClass("headforfixed navforfixed");
-				}else{
-					$(".head").removeClass("headforfixed");
-					$(".nav").removeClass("headforfixed navforfixed");
-				}
-			})
-			
+
 			
 			
 			

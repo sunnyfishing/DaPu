@@ -1,0 +1,125 @@
+.artLeft {
+  width: 228px;
+  padding: 1px solid #aa998d;
+}
+.artLeft .leftTitle {
+  width: 224px;
+  height: 12px;
+  padding: 4px 0 11px 6px;
+}
+.artLeft .leftTitle a {
+  padding-right: 14px;
+  text-align: center;
+}
+.artLeft .leftTitle a:hover {
+  text-decoration: underline;
+}
+.artLeft .leftTitle span {
+  color: #cecece;
+  padding-right: 10px;
+}
+.artLeft .goodsTitle {
+  border: 1px solid #aa998d;
+}
+.artLeft .goodsTitle .titles {
+  height: 14px;
+  width: 218px;
+  background: #aa998d;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 8px 0 9px 10px;
+  font-weight: 600;
+  color: #785046;
+}
+.artLeft .goodsTitle ul {
+  border: 1px solid #dcdcdc;
+}
+.artLeft .goodsTitle ul li {
+  border-top: 1px solid #cec0b7;
+  line-height: 28px;
+  clear: both;
+  position: relative;
+}
+.artLeft .goodsTitle ul li b {
+  width: 5px;
+  height: 4px;
+  overflow: hidden;
+  position: absolute;
+  background: url(../img/coin/bg37.png) 0 -4px no-repeat;
+  z-index: 1;
+  right: 17px;
+  top: 13px;
+}
+.artLeft .goodsTitle ul li .curB {
+  background: url(../img/coin/bg37.png) 0 0 no-repeat;
+}
+.artLeft .goodsTitle ul li .t1 {
+  height: 28px;
+  background: #edeae8;
+  padding: 0 20px;
+  display: block;
+  width: 184px;
+  font-weight: 600;
+}
+.artLeft .goodsTitle ul li a:hover {
+  text-decoration: underline;
+}
+.artLeft .goodsTitle ul li dl {
+  clear: both;
+}
+.artLeft .goodsTitle ul li dl dt a {
+  margin: 0 20px;
+  display: block;
+  width: 184px;
+  color: #615146;
+  height: 33px;
+  line-height: 33px;
+  border-bottom: 1px solid #e7e1dd;
+  font-weight: 600;
+}
+.artLeft .goodsTitle ul li dl dd a {
+  font-weight: 400;
+  padding: 8px 14px 8px 20px;
+  height: 12px;
+  line-height: 12px;
+  color: #615146;
+  float: left;
+}
+.artLeft .viewed {
+  margin: 10px 0;
+  width: 228px;
+  height: 242px;
+}
+.artLeft .viewed span {
+  display: block;
+  height: 29px;
+  line-height: 29px;
+  border: 1px solid #d1d0d0;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.artLeft .viewed .viewImg {
+  width: 228px;
+  height: 183px;
+  margin-top: 28px;
+}
+.artLeft .viewed .viewImg img {
+  width: 100%;
+  height: 100%;
+}
+.artLeft .hotGoods {
+  border: 1px solid #dcdcdc;
+  clear: both;
+}
+.artLeft .hotGoods span {
+  width: 228px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #7f5b42;
+  background: #dcdcdc;
+  display: block;
+  text-indent: 5px;
+  font-weight: 600;
+}

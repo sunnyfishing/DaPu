@@ -7,5 +7,7 @@ requirejs.config({
 		"textModel" : "http://localhost:8080/dev/js/my-plugin/model",
 		"fixedValue" : "http://localhost:8080/dev/js/my-plugin/fixedValue",
 		"animate" : "http://localhost:8080/dev/js/my-plugin/animate",
+		"headNav" : "http://localhost:8080/dev/js/my-plugin/headNav",
+		"index" : "http://localhost:8080/dev/js/my-plugin/index"
  	}
 });

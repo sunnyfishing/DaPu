@@ -16,6 +16,7 @@ $short : 110px;
 .navforfixed{
    top:70px;
 }
+
 .login{
     width:90px;
     height: 30px;
@@ -221,9 +222,6 @@ $short : 110px;
             }
             
         }
-        
-        
-        
         li>a:hover{
             font-weight: 700;
         }
@@ -244,12 +242,17 @@ $short : 110px;
     }
     
 }
+
+
+
+
 .key{
     position: fixed;
     top:112px;
     right: 0;
     width: 40px;
     height: 290px;
+    z-index: 10;
     li{
         height: 45px;
         width: 40px;

@@ -1,91 +1,325 @@
-/*
-Error: Undefined variable: "$width".
-        on line 233 of ./dev/scss/headNavFixed.scss
+.logo {
+  margin-top: 10px;
+}
 
-228:             background:none;
-229:         }
-230:         .navList{
-231:             z-index: 3;
-232:             display: none;
-233:             width: $width;
-234:             background: #FFFFFF;
-235:             opacity:0.9;
-236:             height: 270px;
-237:             position: absolute;
-238:             top:100%;
+.head {
+  height: 70px;
+}
 
-Backtrace:
-./dev/scss/headNavFixed.scss:233
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:20:in `render'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/engine.rb:290:in `render'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/plugin.rb:82:in `update_stylesheets'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
-F:/Program/ruby/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
-F:/Program/ruby/Ruby22-x64/bin/sass:23:in `load'
-F:/Program/ruby/Ruby22-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$width\".\A         on line 233 of ./dev/scss/headNavFixed.scss\A \A 228:             background:none;\A 229:         }\A 230:         .navList{\A 231:             z-index: 3;\A 232:             display: none;\A 233:             width: $width;\A 234:             background: #FFFFFF;\A 235:             opacity:0.9;\A 236:             height: 270px;\A 237:             position: absolute;\A 238:             top:100%;"; }
+.headforfixed {
+  position: fixed;
+  left: 75px;
+  z-index: 11;
+  background: #FFFFFF;
+}
+
+.navforfixed {
+  top: 70px;
+}
+
+.login {
+  width: 90px;
+  height: 30px;
+  background: #b1544f;
+  padding: 0 5px;
+  margin-top: 20px;
+}
+.login a {
+  color: #fff;
+  display: block;
+  margin: 7px 0;
+  padding: 0 10px;
+  font-size: 12px;
+  height: 16px;
+  width: 24px;
+}
+.login a:hover {
+  color: #a4bac8;
+  text-decoration: underline;
+}
+.login .login_a {
+  border-right: 1px solid #fff;
+}
+
+.searchBar {
+  margin-right: 92px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 6;
+}
+.searchBar input {
+  float: left;
+  height: 30px;
+  border: 0;
+}
+.searchBar input:nth-child(1) {
+  background: #eeeeee;
+  text-indent: 5px;
+  width: 180px;
+}
+.searchBar input:nth-child(2) {
+  background: url(../img/big.png) center center no-repeat;
+  width: 30px;
+  cursor: pointer;
+}
+.searchBar input:nth-child(3) {
+  background: url(../img/dapu_201510150001-cart.png) center center no-repeat;
+  margin-left: 10px;
+  width: 30px;
+  cursor: pointer;
+}
+.searchBar .goodsNum {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 19px;
+  height: 17px;
+  border-radius: 20px;
+  background: #b1544f;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.searchBar .carList {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  top: 102%;
+  right: 0;
+  width: 315px;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 15px;
+  border: 1px solid #8e8b8a;
+  background: #fff;
+}
+.searchBar #hotSearch ul {
+  display: none;
+  position: absolute;
+  top: 105%;
+  z-index: 7;
+  width: 170px;
+  background: #EEEEEE;
+  padding: 10px 20px;
+}
+.searchBar #hotSearch ul li {
+  width: 100%;
+  margin: 2px 0;
+}
+.searchBar #hotSearch ul li a {
+  font-size: 14px;
+}
+.searchBar #searchUl ul {
+  position: absolute;
+  top: 105%;
+  display: none;
+  width: 170px;
+  background: #EEEEEE;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.searchBar #searchUl ul li {
+  list-style: circle;
+  line-height: 16px;
+  margin: 4px 0;
+}
+.searchBar #searchUl ul li a {
+  padding: 4px 0;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  color: #FF0000;
+}
+.searchBar #searchUl ul li a:hover {
+  background: #00FF7F;
+}
+
+.nav ul {
+  position: relative;
+}
+.nav ul li {
+  position: relative;
+  cursor: pointer;
+  width: 109px;
+  height: 50px;
+  line-height: 50px;
+  background: url(../img/coin/nav_fenge.png) left center no-repeat;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+}
+.nav ul li .Lichild {
+  z-index: 5;
+  position: absolute;
+  top: 100%;
+  left: 29px;
+  display: none;
+}
+.nav ul li .Lichild dt {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 25px;
+}
+.nav ul li .Lichild dt:hover {
+  text-decoration: underline;
+}
+.nav ul li .Lichild dt:hover a {
+  color: #b27646;
+}
+.nav ul li .Lichild dd {
+  margin-top: 3px;
+  margin-right: 3px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  font-size: 12px;
+}
+.nav ul li .Lichild dd a {
+  padding: 1px 2px;
+}
+.nav ul li .Lichild dd a:hover {
+  color: #fff;
+  background: #BAA796;
+}
+.nav ul li .nav_div1 {
+  width: 1000px;
+}
+.nav ul li .nav_div2 {
+  width: 850px;
+}
+.nav ul li .nav_div3 {
+  width: 600px;
+}
+.nav ul li .nav_div4 {
+  width: 450px;
+}
+.nav ul li .nav_div5 {
+  width: 400px;
+}
+.nav ul li .nav_div6 {
+  width: 300px;
+}
+.nav ul li .nav_div7 {
+  width: 450px;
+}
+.nav ul li .nav_div8 {
+  width: 250px;
+}
+.nav ul li .nav_div9 {
+  width: 150px;
+}
+.nav ul li > a:hover {
+  font-weight: 700;
+}
+.nav ul .homePage {
+  background: none;
+}
+.nav ul .navList {
+  z-index: 3;
+  display: none;
+  width: 1200px;
+  background: #FFFFFF;
+  opacity: 0.9;
+  height: 270px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.key {
+  position: fixed;
+  top: 112px;
+  right: 0;
+  width: 40px;
+  height: 290px;
+  z-index: 10;
+}
+.key li {
+  height: 45px;
+  width: 40px;
+  margin-bottom: 15px;
+}
+.key li a {
+  display: block;
+  opacity: 0;
+  height: 45px;
+  width: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+}
+.key li:hover {
+  background: #B1544F;
+}
+.key li:hover a {
+  opacity: 1;
+}
+.key .keyLi1 {
+  background: url(../img/fixed/dapu_201510150001-home.png) center center no-repeat;
+  line-height: 45px;
+}
+.key .keyLi2 {
+  background: url(../img/fixed/dapu_201510150001-member.png) center center no-repeat;
+}
+.key .keyLi2 a {
+  width: 35px;
+  padding: 3px 0 0 3px;
+}
+.key .keyLi3 {
+  background: url(../img/fixed/dapu_201510150001-cart.png) center center no-repeat;
+  line-height: 45px;
+}
+.key .keyLi4 {
+  background: url(../img/fixed/dapu_201510150001-app.png) center center no-repeat;
+  line-height: 45px;
+  position: relative;
+}
+.key .keyLi4 span {
+  position: absolute;
+  left: -130px;
+  top: -50px;
+  width: 125px;
+  height: 130px;
+  border: 1px solid #E6E6E6;
+  background: #FFFFFF;
+  display: none;
+  text-align: center;
+  line-height: 0;
+  opacity: 0.8;
+}
+.key .keyLi4:hover span {
+  display: block;
+}
+.key .keyLi5 {
+  background: url(../img/fixed/dapu_20161013_huiyuan.png) center center no-repeat;
+  background-size: 40px 45px;
+  line-height: 45px;
+  position: relative;
+}
+.key .keyLi5 span {
+  position: absolute;
+  left: -130px;
+  top: -50px;
+  width: 125px;
+  height: 130px;
+  border: 1px solid #E6E6E6;
+  background: #FFFFFF;
+  display: none;
+  text-align: center;
+  line-height: 0;
+  opacity: 0.8;
+}
+.key .keyLi5:hover span {
+  display: block;
+}
+.key .keyLi6 {
+  background: url(../img/fixed/dapu_201510150001-top.png) center center no-repeat;
+}
+.key .keyLi6 a {
+  width: 35px;
+  padding: 3px 0 0 3px;
+}
