@@ -1,0 +1,305 @@
+.banner {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.banner .imglist {
+  width: 4800px;
+  height: 450px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.banner .imglist li {
+  float: left;
+}
+.banner .dotUl {
+  position: absolute;
+  left: 45%;
+  bottom: 30px;
+  height: 15px;
+  background: #FFFFFF;
+  opacity: 0.5;
+}
+.banner .dotUl li {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+  background: #ADFF2F;
+}
+.banner .dotUl .active {
+  background: red;
+  opacity: 0.7;
+}
+
+.titleImg1 {
+  height: 60px;
+  padding: 20px 0 5px;
+}
+
+.topic {
+  height: 322px;
+}
+.topic .topicCom {
+  float: left;
+  width: 398px;
+  margin: 0 1px;
+}
+.topic .topic1 {
+  position: relative;
+  float: left;
+}
+.topic .topic1 .topic1Img {
+  width: 398px;
+  height: 218px;
+  overflow: hidden;
+  position: relative;
+}
+.topic .topic1 .topic1Img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: width 1s,left 1s,height 1s, bottom 1s;
+}
+.topic .topic1 .topic1Img img:hover {
+  width: 103%;
+  left: -10px;
+  height: 103%;
+  bottom: -5px;
+}
+.topic .topic1 .topic1Word {
+  width: 359px;
+  height: 117px;
+  background: #eeeeee;
+  position: absolute;
+  top: 195px;
+  left: 9px;
+  padding: 5px 11px;
+}
+.topic .topic1 .topic1Word .topicMes .person {
+  width: 309px;
+  height: 42px;
+  margin-left: 49px;
+}
+.topic .topic1 .topic1Word .topicMes .name {
+  height: 19px;
+  line-height: 19px;
+  font-weight: 600;
+  text-indent: 12px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes {
+  height: 23px;
+  line-height: 23px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes img {
+  margin-top: 6px;
+  width: 12px;
+  height: 10px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes .posi {
+  margin-left: 14px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes .view {
+  margin-left: 35px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes .good {
+  margin-left: 25px;
+}
+.topic .topic1 .topic1Word .topicMes .nameMes .mes {
+  margin-left: 13px;
+}
+.topic .topic1 .topic1Word .topicMes > img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.topic .topic1 .topic1Word .topicTitle {
+  float: left;
+  width: 300px;
+  height: 16px;
+  padding-left: 17px;
+  border-left: 3px solid #76c5af;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.topic .topic1 .topic1Word .topicWord {
+  margin: 13px 0 4px 7px;
+}
+.topic .topic1 .topic1Word .topicCont {
+  float: left;
+  letter-spacing: 1px;
+  color: #666666;
+}
+
+.goods {
+  height: 290px;
+}
+.goods .goods1 {
+  width: 398px;
+  margin: 0 1px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.goods .goods1 img {
+  width: 100%;
+  height: 100%;
+}
+.goods .goods1 .goods1Word {
+  width: 398px;
+  padding: 10px 0 6px;
+}
+
+.goodsMes {
+  position: absolute;
+  background: #fff;
+  left: 0;
+  opacity: 0;
+  height: 39px;
+}
+.goodsMes span {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 16px;
+  line-height: 16px;
+}
+
+.news {
+  height: 950px;
+  margin-bottom: 10px;
+  padding-left: 3px;
+}
+.news .newsCol {
+  margin: 0 1px;
+  float: left;
+  position: relative;
+}
+.news .newsCol img {
+  width: 100%;
+  height: 100%;
+}
+.news .newsCol1 {
+  overflow: hidden;
+  width: 236px;
+  height: 474px;
+}
+.news .newsCol1word {
+  width: 237px;
+  padding: 10px 0 6px;
+}
+.news .newsCol2 {
+  width: 474px;
+}
+.news .newsCol2 .newsCol2Top {
+  position: relative;
+  margin-bottom: 2px;
+  width: 474px;
+  height: 236px;
+  overflow: hidden;
+}
+.news .newsCol2 .newsCol2Bottom {
+  position: relative;
+  width: 474px;
+  height: 236px;
+  overflow: hidden;
+}
+.news .newsCol2word {
+  width: 474px;
+  padding: 10px 0 6px;
+}
+.news .newsCol3 {
+  width: 236px;
+}
+.news .newsCol3 .newsCol3Top {
+  position: relative;
+  margin-bottom: 2px;
+  width: 236px;
+  height: 236px;
+  overflow: hidden;
+}
+.news .newsCol3 .newsCol3Bottom {
+  position: relative;
+  width: 236px;
+  height: 236px;
+  overflow: hidden;
+}
+.news .newsCol3word {
+  width: 236px;
+  padding: 10px 0 6px;
+}
+.news .parts {
+  width: 1192px;
+  height: 474px;
+  float: left;
+}
+.news .parts dl {
+  margin: 2px 1px 0;
+  float: left;
+  width: 236px;
+  height: 236px;
+  position: relative;
+  overflow: hidden;
+}
+.news .parts dl dt img {
+  width: 100%;
+  height: 100%;
+}
+.news .parts .partsMes {
+  width: 236px;
+  height: 39px;
+  padding: 10px 0 6px;
+}
+
+.foot {
+  font-size: 10px;
+  height: 288px;
+  background: #eeeeee;
+  text-align: center;
+}
+.foot .weChat dl {
+  float: left;
+  margin: 20px 90px;
+}
+.foot .weChat dl dt {
+  width: 120px;
+  height: 120px;
+}
+.foot .weChat dl dd {
+  text-align: center;
+  margin-top: 9px;
+}
+.foot .footUl {
+  width: 360px;
+  margin: 18px auto 0;
+}
+.foot .footUl li {
+  text-align: center;
+  float: left;
+  width: 59px;
+  border-left: 1px solid #222222;
+}
+.foot .footUl li a:hover {
+  text-decoration: underline;
+  color: #5F3F3F;
+}
+.foot .footUl .footLi {
+  border: none;
+}
+
+.foot > span {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+}

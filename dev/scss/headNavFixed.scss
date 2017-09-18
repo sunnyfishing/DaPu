@@ -1,0 +1,341 @@
+$width : 1200px;
+$short : 110px;
+
+.logo{
+    margin-top: 10px;
+}
+.head{
+    height: 70px;
+}
+.headforfixed{
+    position: fixed;
+    left:75px;
+    z-index: 11;
+    background: #FFFFFF;
+}
+.navforfixed{
+   top:70px;
+}
+.login{
+    width:90px;
+    height: 30px;
+    background: #b1544f;
+    padding:0 5px;
+    margin-top: 20px;
+    a{
+        color: #fff;
+        display: block;
+        margin: 7px 0;
+        padding: 0 10px;
+        font-size: 12px;
+        height: 16px;
+        width: 24px;
+    }
+    a:hover{
+        color:#a4bac8;
+        text-decoration: underline;
+    }
+    .login_a{
+        border-right: 1px solid #fff;
+    }
+    
+}
+.searchBar{
+    margin-right:92px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 6;
+    input{
+        float:left;
+        height:30px;
+        border: 0;
+    }
+    input:nth-child(1){
+        background: #eeeeee;
+        text-indent: 5px;
+        width: 180px;
+    }
+    input:nth-child(2){
+        background: url(../img/big.png) center center no-repeat;
+        width: 30px;
+        cursor: pointer;
+    }
+    
+    input:nth-child(3){
+        background: url(../img/dapu_201510150001-cart.png) center center no-repeat;
+        margin-left:10px;
+        width: 30px;
+        cursor: pointer;
+        
+    }
+    .goodsNum{
+        position: absolute;
+        top:0;
+        right:-10px;
+        width: 19px;
+        height: 17px;
+        border-radius:20px;
+        background: #b1544f;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+    }
+    .carList{
+        position: absolute;
+        display: none;
+        z-index: 10;
+        top:102%;
+        right:0;
+        width: 315px;
+        height: 60px;
+        line-height: 60px;
+        padding-left:15px;
+        border: 1px solid #8e8b8a;
+        background: #fff;
+        
+    }
+    #hotSearch ul{
+       display: none;
+       position: absolute;
+       top:105%;
+       z-index: 7;
+       width: 170px;
+       background: #EEEEEE;
+       padding:10px 20px;
+       li{
+           width: 100%;
+           margin: 2px 0; 
+           a{
+              font-size: 14px;
+           }
+       } 
+    }
+    #searchUl{
+        ul{
+            position: absolute;
+            top:105%;
+            display: none;
+            width: 170px;
+            background: #EEEEEE;
+            padding:0 20px;
+            
+            overflow: hidden;
+            li{
+                list-style: circle;
+               
+                line-height: 16px;
+                margin: 4px 0; 
+                
+                a{
+                    padding: 4px 0;
+                    width: 100%;
+                    display: block;
+                    font-size: 14px;
+                    color:#FF0000;
+                    
+                }
+                a:hover{
+                    background: #00FF7F;
+                }
+                   
+            }
+        }
+    }    
+}
+
+.nav{
+    ul{
+        position: relative;
+        li{
+            position: relative;
+            cursor: pointer;
+            width:109px;
+            height: 50px;
+            line-height: 50px;
+            background: url(../img/coin/nav_fenge.png) left center no-repeat;
+            float: left;
+            text-align: center;
+            font-size: 14px;            
+            .Lichild{
+                z-index: 5;
+                position: absolute;
+                top:100%;
+                left:29px;
+                display: none;
+                dt{
+                  float: left; 
+                  height: 30px;
+                  line-height: 30px;
+                  font-weight: 600;
+                  font-size: 14px;
+                  margin-right: 25px;
+                }
+                dt:hover{
+                    text-decoration: underline;
+                }
+                dt:hover a{
+                    color:#b27646;
+                }
+                dd{
+                    margin-top: 3px;
+                    margin-right: 3px;
+                    height: 30px;
+                    line-height: 30px;
+                    float: left;
+                    font-size: 12px;
+                    a{
+                        padding: 1px 2px;                        
+                    }
+                }
+                dd a:hover{
+                    color:#fff;
+                    background: #BAA796;
+                }
+            }
+            .nav_div1{
+                width:1000px;
+            }
+            .nav_div2{
+                width:850px;
+            }
+            .nav_div3{
+                width:600px;
+            }
+            .nav_div4{
+                width:450px;
+            }
+            .nav_div5{
+                width:400px;
+            }
+            .nav_div6{
+                width:300px;
+            }
+            .nav_div7{
+                width:450px;
+            }
+            .nav_div8{
+                width:250px;
+            }
+            .nav_div9{
+                width:150px;
+            }
+            
+        }
+        
+        
+        
+        li>a:hover{
+            font-weight: 700;
+        }
+        .homePage{
+            background:none;
+        }
+        .navList{
+            z-index: 3;
+            display: none;
+            width: $width;
+            background: #FFFFFF;
+            opacity:0.9;
+            height: 270px;
+            position: absolute;
+            top:100%;
+            left: 0;
+        }
+    }
+    
+}
+.key{
+    position: fixed;
+    top:112px;
+    right: 0;
+    width: 40px;
+    height: 290px;
+    li{
+        height: 45px;
+        width: 40px;
+        margin-bottom: 15px;
+        a{
+            display: block;
+            opacity: 0;
+            height: 45px;
+            width: 40px;
+           
+            text-align: center;
+            color:#FFFFFF;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    li:hover{
+        a{
+            opacity: 1;
+        }
+        background: #B1544F;
+    }
+    .keyLi1{
+        background: url(../img/fixed/dapu_201510150001-home.png) center center no-repeat;
+        line-height: 45px;
+    }
+    .keyLi2{
+        background:  url(../img/fixed/dapu_201510150001-member.png) center center no-repeat;
+        a{
+            width: 35px;
+            padding:3px 0 0 3px;   
+        }
+    }
+    .keyLi3{
+        background: url(../img/fixed/dapu_201510150001-cart.png) center center no-repeat;
+        line-height: 45px;
+    }
+    .keyLi4{
+        background: url(../img/fixed/dapu_201510150001-app.png) center center no-repeat;
+        line-height: 45px;
+        position: relative;
+        span{
+            position: absolute;
+            left:-130px;
+            top:-50px;
+            width: 125px;
+            height: 130px;
+            border: 1px solid #E6E6E6;
+            background: #FFFFFF;
+            display: none;
+            text-align: center;
+            line-height: 0;
+            opacity: 0.8;
+        }
+    }
+    .keyLi4:hover span{
+        display: block;
+    }
+    
+    .keyLi5{
+       background: url(../img/fixed/dapu_20161013_huiyuan.png) center center no-repeat;
+       background-size: 40px 45px;
+       line-height: 45px;
+       position: relative;
+        span{
+            position: absolute;
+            left:-130px;
+            top:-50px;
+            width: 125px;
+            height: 130px;
+            border: 1px solid #E6E6E6;
+            background: #FFFFFF;
+            display: none;
+            text-align: center;
+            line-height: 0;
+            opacity: 0.8;
+        }
+    }
+    .keyLi5:hover span{
+        display: block;
+    }
+    .keyLi6{
+        background: url(../img/fixed/dapu_201510150001-top.png) center center no-repeat;
+        a{
+            width: 35px;
+            padding:3px 0 0 3px;   
+        }
+    }
+}
