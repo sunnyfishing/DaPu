@@ -9,6 +9,7 @@ require(["js/config"], function(m){
 			$("#keyDiv").load("html/key.html",function(){
 			//fixed没有用 js 代码
 			});
+
 /*-------------------------banner-----------------------------------------------*/
 			var bannerIndex = 0;
 			var ulLength = $(".imglist li").length;

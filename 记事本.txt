@@ -78,9 +78,12 @@ index.html : http://localhost:8080/dev/
 2.js页面开头要加两个require ,引入所需模板，和index.js 类似，不过是要根据所需模板进行引入
 
 ---------------------------------------------------------------------
-因为将head 和 nav 单独封装起来了，所以使用 load 加载封装head 和nav 的html，包括1.原html中的声明了一个div  2.在原HTML的 js 中使用load加载
+1.因为将head 和 nav 单独封装起来了，所以使用 load 加载封装head 和nav 的html，包括1.原html中的声明了一个div  2.在原HTML的 js 中使用load加载
 因为在head 和 nav 的 HTML 代码是在 js 中加载，所以不能将 head 和 nav 的 js 按照一般方法引入，需要给load添加一个回调函数，回调函数中放接口
 接口是由define定义的，要在config中定义，然后在 js中使用声明的对象调用define中的方法
+
+2.现在有两种方式获取数据（1）使用本地json文件获取---问题：因为使用的是gulp服务器，所以文件不知道放在哪，如果使用Tomcat服务器放在WebApps下ok不？
+						（2 使用接口获取网络资源-----问题：接口老是链接不上，获取不到返回值 ，报错。
 
 
 

@@ -1,0 +1,92 @@
+.foot {
+  font-size: 10px;
+  height: 108px;
+  text-align: center;
+  background: #00FF7F;
+}
+.foot .footUl {
+  width: 360px;
+  margin: 18px auto 0;
+}
+.foot .footUl li {
+  text-align: center;
+  float: left;
+  width: 59px;
+  border-left: 1px solid #222222;
+}
+.foot .footUl li a:hover {
+  text-decoration: underline;
+  color: #5F3F3F;
+}
+.foot .footUl .footLi {
+  border: none;
+}
+
+.foot > span {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+}
+
+.artical {
+  height: 410px;
+  background: url(../img/login/logImg.jpg) center center no-repeat;
+  position: relative;
+}
+.artical .enroll {
+  padding-top: 2px;
+  height: 400px;
+  width: 540px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 5px;
+}
+.artical .enroll div {
+  margin-top: 17px;
+}
+.artical .enroll label {
+  width: 107px;
+  height: 27px;
+  line-height: 27px;
+  float: left;
+  text-align: right;
+}
+.artical .enroll input {
+  border: 1px solid #c7c7c7;
+  height: 24px;
+  float: left;
+}
+.artical .enroll .phoneDiv span {
+  display: none;
+  color: red;
+  background: #e5e6d2;
+  height: 21px;
+  padding-left: 14px;
+  height: 24px;
+  line-height: 24px;
+}
+.artical .enroll .codeDiv input {
+  width: 87px;
+}
+.artical .enroll .codeDiv span {
+  display: none;
+  width: 100px;
+  float: left;
+  margin: 5px 10px 2px 14px;
+}
+.artical .enroll .codeDiv #mesBtn {
+  margin-left: 7px;
+  width: 77px;
+  height: 27px;
+  border-radius: 5px;
+  background: url(../img/login/loginbg.png) -421px -6px no-repeat;
+}
+.artical .enroll .spanDiv {
+  float: left;
+  height: 27px;
+  line-height: 27px;
+  margin: 18px 0 0 103px;
+}

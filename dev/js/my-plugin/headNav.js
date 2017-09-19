@@ -108,7 +108,7 @@ define(["jquery","common"],function($){
 			})
 			$(window).scroll(function(){
 				//console.log($(".head").scrollTop());
-				if($(document.body).scrollTop() > 0){
+				if($(document.body).scrollTop() > 60){
 					$(".head").addClass("headforfixed");
 					$(".nav").addClass("headforfixed navforfixed");
 				}else{
@@ -131,8 +131,3 @@ define(["jquery","common"],function($){
 })*/
 //然后放在config.js 配置文件中配置
 //然后再调用文件中先引入，然后产生对象，然后对象调用函数
-
-
-
-
-
