@@ -38,22 +38,22 @@ gulp.task("chanJs",function(){
 		.pipe(uglify())
 		.pipe(gulp.dest("./dev/minjs/"))
 })
+//改变端口号，使8080用来给Tomcat，这样可以使用Tomcat获取本地json数据
+gulp.task("webserver", function () {
+	console.log('webserver.');
+	gulp.src('./dev')
+		.pipe(
+			webserver({
+				host: 'localhost',
+				port: 8000,
+				livereload: true,
+				directoryListing: {
+					enable: true,
+					path: './dev'
+				},
 
-//gulp.task("webserver", function () {
-//	console.log('webserver.');
-//	gulp.src('./dev')
-//		.pipe(
-//			webserver({
-//				host: 'localhost',
-//				port: 8000,
-//				livereload: true,
-//				directoryListing: {
-//					enable: true,
-//					path: './dev'
-//				},
-//
-//			})
-//		)
+			})
+		)
 	/*connect.server({
         root: "./dev",
         port: 8000,
@@ -68,9 +68,9 @@ gulp.task("chanJs",function(){
 
 //5.定义一个监听器监听scss和css文件的变化，当有变化时，执行相应的任务
 gulp.task("chanLis",function(){
-	connect.server({
+	/*connect.server({
 		livereload:true
-	});
+	});*/
 	console.log('chanLis.');
 	gulp.watch("./dev/*.html", ["chanHtml"]);			//监听dev下所有的html
 	gulp.watch("./dev/scss/*scss",["chanScssHome"]);	//监听scss文件的变化
@@ -79,7 +79,7 @@ gulp.task("chanLis",function(){
 })
 //以上形成了 在打开chanLis监听器的情况下  当改变scss文件时，页面自动刷新
 
-gulp.task('default', ["chanLis"], function () {
+gulp.task('default', ["chanLis","webserver"], function () {
 	console.log('done.');
 })
 

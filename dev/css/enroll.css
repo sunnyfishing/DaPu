@@ -2,7 +2,6 @@
   font-size: 10px;
   height: 108px;
   text-align: center;
-  background: #00FF7F;
 }
 .foot .footUl {
   width: 360px;
@@ -34,6 +33,7 @@
   position: relative;
 }
 .artical .enroll {
+  color: #5a5350;
   padding-top: 2px;
   height: 400px;
   width: 540px;
@@ -55,14 +55,17 @@
   text-align: right;
 }
 .artical .enroll input {
+  text-indent: 5px;
   border: 1px solid #c7c7c7;
   height: 24px;
   float: left;
 }
-.artical .enroll .phoneDiv span {
+.artical .enroll .message {
   display: none;
+  float: right;
   color: red;
   background: #e5e6d2;
+  width: 230px;
   height: 21px;
   padding-left: 14px;
   height: 24px;
@@ -85,8 +88,36 @@
   background: url(../img/login/loginbg.png) -421px -6px no-repeat;
 }
 .artical .enroll .spanDiv {
-  float: left;
   height: 27px;
   line-height: 27px;
   margin: 18px 0 0 103px;
+}
+.artical .enroll .bingo {
+  margin-left: 107px;
+  height: 15px;
+  line-height: 15px;
+  margin-top: 25px;
+}
+.artical .enroll .bingo input {
+  height: 15px;
+}
+.artical .enroll .loginBtn {
+  margin-left: 107px;
+  height: 40px;
+  line-height: 40px;
+}
+.artical .enroll .loginBtn a {
+  color: #FF0000;
+}
+.artical .enroll .loginBtn a:hover {
+  text-decoration: underline;
+}
+.artical .enroll .loginBtn input {
+  font-size: 16px;
+  width: 198px;
+  height: 40px;
+  background: #FFFFFF;
+}
+.artical .enroll .loginBtn input:hover {
+  background: #d9d8d4;
 }

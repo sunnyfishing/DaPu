@@ -1,0 +1,124 @@
+.foot {
+  font-size: 10px;
+  height: 108px;
+  text-align: center;
+}
+.foot .footUl {
+  width: 360px;
+  margin: 18px auto 0;
+}
+.foot .footUl li {
+  text-align: center;
+  float: left;
+  width: 59px;
+  border-left: 1px solid #222222;
+}
+.foot .footUl li a:hover {
+  text-decoration: underline;
+  color: #5F3F3F;
+}
+.foot .footUl .footLi {
+  border: none;
+}
+
+.foot > span {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+}
+
+.widLogin {
+  width: 1000px;
+  height: 410px;
+  position: relative;
+  background: url(../img/login/20170811005_login1.jpg) center center no-repeat;
+}
+.widLogin .shade {
+  width: 500px;
+  height: 378px;
+  background: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 12px 10px 0;
+}
+.widLogin .shade .log {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  height: 38px;
+  line-height: 38px;
+  font-size: 24px;
+  text-align: center;
+  color: #7e736e;
+}
+.widLogin .shade fieldset {
+  border: none;
+  border-top: 1px solid #7e746e;
+}
+.widLogin .shade fieldset label {
+  font-size: 14px;
+  text-align: right;
+  float: left;
+  width: 190px;
+  height: 28px;
+  line-height: 28px;
+  color: #8f8f90;
+}
+.widLogin .shade fieldset input {
+  width: 159px;
+  height: 28px;
+  border: 1px solid #bdbebf;
+  border-radius: 3px;
+  text-indent: 5px;
+}
+.widLogin .shade fieldset span {
+  color: #A50708;
+  display: none;
+}
+.widLogin .shade fieldset .userName {
+  margin-top: 50px;
+}
+.widLogin .shade fieldset div {
+  margin-bottom: 20px;
+}
+.widLogin .shade .logBtn {
+  margin-left: 190px;
+}
+.widLogin .shade .logBtn a {
+  height: 36px;
+  line-height: 36px;
+  color: #4d87b6;
+  line-height: 36px;
+}
+.widLogin .shade .logBtn .logA {
+  text-align: center;
+  float: left;
+  width: 52px;
+  border: 1px solid #4294ad;
+  background: #4fabc7;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-right: 3px;
+}
+.widLogin .shade .logBtn a:hover {
+  text-decoration: underline;
+}
+.widLogin .shade .other {
+  margin-left: 190px;
+  margin-top: 24px;
+}
+.widLogin .shade .other a {
+  float: left;
+  padding: 0 5px;
+}
+.widLogin .shade .other a:hover {
+  text-decoration: underline;
+  color: #795944;
+}
+.widLogin .shade .other .logB {
+  border-right: 1px solid #000000;
+}

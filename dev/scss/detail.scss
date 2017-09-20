@@ -1,5 +1,20 @@
-#box4{
-    width:400px;
-    height: 300px;
-    background: cadetblue;
+.posi{
+    height: 10px;
+    background: red;
+    padding:16px 0 11px;
+    a{
+        padding:0 18px 0 14px;
+        background: url(../img/detail/icon/jiantou.png) right center no-repeat;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    span{
+        color:#bababa;
+        padding-left:10px;
+    }
+}
+.main{
+    height:380px;
+    border: 1px solid #e6e6e6;
 }

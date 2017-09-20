@@ -2,12 +2,12 @@
 requirejs.config({
 	//baseUrl : "上一级路径"	 config所在的位置
 	paths: {							
-		"jquery" : "http://localhost:8080/dev/js/jquery-1.11.3",
-		"common" : "http://localhost:8080/dev/js/my-plugin/common",
-		"textModel" : "http://localhost:8080/dev/js/my-plugin/model",
-		"fixedValue" : "http://localhost:8080/dev/js/my-plugin/fixedValue",
-		"animate" : "http://localhost:8080/dev/js/my-plugin/animate",
-		"headNav" : "http://localhost:8080/dev/js/my-plugin/headNav",
-		"index" : "http://localhost:8080/dev/js/my-plugin/index"
+		"jquery" : "/js/jquery-1.11.3",
+		"common" : "/js/my-plugin/common",
+		"textModel" : "/js/my-plugin/model",
+		"fixedValue" : "/js/my-plugin/fixedValue",
+		"animate" : "/js/my-plugin/animate",
+		"headNav" : "/js/my-plugin/headNav",
+		"index" : "/js/my-plugin/index"
  	}
 });

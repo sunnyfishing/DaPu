@@ -2,7 +2,6 @@
     font-size: 10px;
     height: 108px;
     text-align: center;
-    background: #00FF7F;
     .footUl{
         width: 360px;
         margin:18px auto 0;
@@ -32,6 +31,7 @@
     background: url(../img/login/logImg.jpg) center center no-repeat;
     position: relative;
     .enroll{
+        color:#5a5350;
         padding-top:2px;
         height:400px;
         width:540px;
@@ -53,21 +53,24 @@
             text-align: right;
         }
         input{
+            text-indent: 5px;
             border: 1px solid #c7c7c7;
             height: 24px;
             float: left;    
         }
         
+        .message{
+            display: none;
+            float: right;
+            color:red;
+            background: #e5e6d2;
+            width: 230px;
+            height:21px;
+            padding-left:14px;
+            height: 24px;
+            line-height: 24px;
+        }
         .phoneDiv{
-            span{
-                display: none;
-                color:red;
-                background: #e5e6d2;
-                height:21px;
-                padding-left:14px;
-                height: 24px;
-                line-height: 24px;
-            }
         }
         .codeDiv{
             input{
@@ -87,12 +90,42 @@
                 background: url(../img/login/loginbg.png) -421px -6px no-repeat;
             }
         }
-        .spanDiv{
-            
-            float: left;
+        .spanDiv{            
             height:27px;
             line-height: 27px;
             margin:18px 0 0 103px;
+        }
+        .smsDiv{
+            
+        }
+        .bingo{
+            margin-left: 107px;
+            height: 15px;
+            line-height: 15px;
+            margin-top: 25px;
+            input{
+                height:15px;
+            }
+        }
+        .loginBtn{
+            margin-left: 107px;
+            height: 40px;
+            line-height: 40px;
+            a{
+                color:#FF0000;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            input{
+                font-size: 16px;
+                width: 198px;
+                height: 40px;
+                background: #FFFFFF;
+            }
+            input:hover{
+                background: #d9d8d4;
+            }
         }
     }
 }

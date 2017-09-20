@@ -17,27 +17,42 @@
 			<div class="enroll">
 				<div class="phoneDiv clear">
 					<label for="phone">手机号&nbsp;:&nbsp;</label>
-					<input type="text" name="" id="phone" value="" />
-					<span>当前仅支持中国大陆手机号</span>
+					<input type="text" name="" id="phone" value="" maxlength="11"/>
+					<span class="message">当前仅支持中国大陆手机号</span>
 				</div>
 				<div class="codeDiv clear">
-					<label for="code">图片码&nbsp; : &nbsp;</label>
-					<input type="text" name="" id="code" value="" />
+					<label for="code">图片码&nbsp;:&nbsp;</label>
+					<input type="text" name="" id="code" value=""/>
 					<span><img src="img/login/passport-verifyCode.png"/></span>
-					<input type="button" name="" id="mesBtn" value="获取短信码" />
+					<input type="submit" name="" id="mesBtn" value="获取短信码" />
 				</div>
 				<div class="spanDiv">
 					<span>请先输入图片验证码的计算机结果再点击获取短信码</span>					
 				</div>
-				<div class="smsDiv lc">
-					<label for="mesCode">短信码</label>
-					<input type="text" name="" id="mesCode" value="" />					
+				<div class="smsDiv clear">
+					<label for="mesCode">短信码&nbsp;:&nbsp;</label>
+					<input type="text" name="" id="mesCode" value="" maxlength="4"/>	
+					<span class="message">请输入正确的验证码</span>
 				</div>
-					<!-- />
-					<label for="password">密码</label>
+				<div class="password clear">
+					<label for="password">密码&nbsp;:&nbsp;</label>
 					<input type="text" name="" id="password" value="" />
-					<label for="surePass">确认密码</label>
-					<input type="text" name="" id="surePass" value="" />-->
+					<span class="message"></span>
+				</div>
+				<div class="surepass clear">
+					<label for="surePass">确认密码&nbsp;:&nbsp;</label>
+					<input type="text" name="" id="surePass" value="" />
+					<span class="message">请输入正确的密码</span>
+				</div>
+				<div class="bingo clear">
+					<input type="checkbox" value="" checked="checked"/>
+					<span>同意注册协议</span>
+					<a href="#">《大朴用户协议》</a>
+				</div>
+				<div class="loginBtn clear">
+					<input type="submit" name="" id="login" value="注册" />
+					<span>我已经注册，现在就<a href="#">登录</a></span>
+				</div>
 			</div>
 		</div>
 		
