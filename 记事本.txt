@@ -90,12 +90,26 @@ head.html 和 nav.html 中不能使用body,html,head之类的，使用一个大<
 
 4.在打开gulp时，当使用default的方式开启，就只需要在dos输入gulp即可
 
+5.在js里从css中获取定位之后的left和top的值
+	只获取数值： var left = $('#test').position().left;
+	获取一个字符串：var left = $('#test').css('left');		这种方法也可以获取其他属性的值：var width = $('#test').css('width');
 
+6.在js中用变量给css改变值   .css({left:leftValue+"px"});
 
+7.获取一个div所占的全部宽度：
+		var content = $(‘div’). width();//只是获取content宽度
+		
+		var contentWithPadding = $(‘div’). innerWidth();//获取content+padding的宽度
+		
+		var withoutMargin = $(‘div’). outerWidth();//获取content+padding+border的宽度
+		
+		var full = $(‘div’). outerWidth(true);//获取content+padding+border+margin的宽度
 
+8.禁用属性：.attr({"disabled":"disabled"})
 
+9.选取一个DOM元素/jQuery对象，------》通过提前给DOM元素添加一个用于表示的class，然后，如果需要改变，可以先移除所有的其他元素身上的class，然后再单独给目标DOM元素添加。当需要标示验证的时候，就判断DOM元素是否含有该class
 
-
+10.!!!!!bug!!!!!!!!物品详情页的图片导航只有刚开始添加的那个ok，第二个，第三个添加的都有bug
 
 
 
