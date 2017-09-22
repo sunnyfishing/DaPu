@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="dev/js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="active">
+			<img src=""/>
+		</div>
+	</body>
+	<script >
+		var img1
+		var xhr = new XMLHttpRequest();
+		xhr.open("get","http://localhost:8080/AJAX/DaPu/banner/banner.json",true);		//这里打开的是存放资源的json文件
+		xhr.onload = function(){
+			img1 = JSON.parse(xhr.response);
+			//$(".active").find("img").attr({src:img1.img[0].src});
+			console.log("1");
+		}
+		xhr.send();
+		//console.log($(".active"));
+		console.log("2");
+		console.log("3");
+	</script>
+</html>

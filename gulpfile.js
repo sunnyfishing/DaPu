@@ -51,19 +51,19 @@ gulp.task("webserver", function () {
 					enable: true,
 					path: './dev'
 				},
-
-			})
+				middleware: [
+					proxy("/api", {
+						target: 'http://localhost:8080', // target host
+	        			changeOrigin: true,               // needed for virtual hosted sites
+			       		pathRewrite: {
+			         		'^/api' : '' // remove base path
+		        		}
+					})
+				]
+			}
 		)
-	/*connect.server({
-        root: "./dev",
-        port: 8000,
-        livereload: true,
-        middleware: function (connect, opt) {
-            opt.route = '/proxy';
-            var proxy = new Proxy(opt);
-            return [proxy];
-        }
-    });*/
+	)
+	
 })
 
 //5.定义一个监听器监听scss和css文件的变化，当有变化时，执行相应的任务

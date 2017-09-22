@@ -1,0 +1,26 @@
+1.在Tomcat的WebApps下建立资源				
+	见eg.json文件
+
+2.如果想在WebApps文件夹之外的地方创建项目，必须进行额外配置
+	配置网址：http://jingyan.baidu.com/article/29697b913f4a29ab20de3cd9.html
+
+3.在gulpfile.js中添加对http://localhost:8080端口的修饰
+	见gulpfile.js文件
+
+4.在index.js中创建ajax请求
+	见index.js文件
+
+5.一般请求的数据都是数组，因此在添加到页面时，是和模板一起使用
+	见index.js文件模板部分
+	
+6.在index.html中创建模板的script模板	,其中路径比较特别，尤为注意
+	见index.html文件
+
+7.引用封装的模板函数 model.js 并调用template函数
+	见model.js文件
+	
+8.json文件中的路径是根据引用json文件的js文件的位置确定的
+	加eg.json文件中的 src 路径
+
+9.如果想对从json中获得，并添加到页面的DOM元素进行js操作时，需要把操作内容放在xhr.onload = function(){}函数中
+	见index.js

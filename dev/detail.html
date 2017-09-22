@@ -7,10 +7,25 @@
 		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
 		<link rel="stylesheet" type="text/css" href="css/headNavFixed.css"/>
 		<script src="js/require.js" type="text/javascript" data-main = "detail.js" charset="utf-8"></script>
+		<script id="detailWordModel" type="text/javascript">
+			<%for(var i=0; i<data.length; i++){%>
+				<dl class="detailWordDl clear">
+					<dt class="fl"><%=data[i].word1%></dt>
+					<dd class="fl"><%=data[i].word2%></dd>
+				</dl>
+			<%}%>
+		</script>
+		<script id="detailPicModel" type="text/javascript">
+			<%for(var i=0; i<data.length; i++){%>
+				<div class="clear">
+					<img src="<%=data[i].src%>"/>
+				</div>
+			<%}%>
+		</script>
 	</head>
 	<body>
-		<div id="headNav">
-		</div>
+		<div id="headNav">				<!--当高度达到下面评论区时，就让head和nav隐藏 当高度小于多少时显示-->
+		</div>	
 		<div id="keyDiv">
 		</div>
 		<div class="posi comwid">
@@ -24,8 +39,7 @@
 		<div class="main comwid">
 			<div class="leftPic fl">
 				<div class="mainPic">
-					<img src=""/>
-				
+					<img src=""/>	
 				</div>
 			
 				<div class="listPic clear">
@@ -148,6 +162,67 @@
 					
 				</div>
 			</div>
+		</div>
+		<div class="bottom clear comwid">
+			<div class="bottom-left fl">
+				
+			</div>
+			<div class="bottom-right clear fl">
+				<div class="rightTop">
+					<span class="goodsDetail fl">商品详情</span>
+					<span class="goodsServe fl">售后服务</span>
+					<span class="goodsSay fl">用户评价（2）</span>
+				</div>
+				<div class="fir rightBottom clear">
+					<div class="detailWord clear">
+						
+					</div>
+					<div class="detailPic clear">
+						
+					</div>
+				</div>
+				<div class="sec rightBottom clear">
+					<!--关于售后方面的，可以做一个公用的模块-->
+					<div id="serve">
+						
+					</div>
+					<div class="detailWord clear">
+						
+					</div>
+					<div class="detailPic clear">
+						
+					</div>
+				</div>
+				<div class="thr rightBottom clear">
+					<!--用户评论模块可以用json文件直接导入-->
+					<div class="">
+						
+					</div>
+					<div class="detailWord clear">
+						
+					</div>
+					<div class="detailPic clear">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="foot comwid">
+			<div class="footUl clear">
+				<ul>
+					<li class="footLi"><a href="#">关于大朴</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">手机大朴</a></li>
+					<li><a href="#">友情链接</a></li>
+					<li><a href="#">网站地图</a></li>
+				</ul>
+			</div>
+
+			<span>Copyright @ 2013-2018 dapu.com 北京大朴至向家居设计有限公司 京ICP备12027522号 京ICP证130030号</span>
+			<a href="#"><img src="img/coin/dapu_icon-police.png"/>京公网安备 11010502030202号</a>
 		</div>
 	</body>
 </html>

@@ -10,16 +10,21 @@
 		<script src="js/require.js" type="text/javascript" data-main="index.js"></script>
 		
 		<script type="text/html" id="mode">
-			<ul>
+			<ul class="imglist">
 				<% for(var i=0; i<(data.length > 4? 4 : data.length); i++ ){ %>
-					<li><a href="#"><%=data[i]%></a></li>
+					<li><img src="<%=data[i].src%>"/></li>
+				<%}%>
+			</ul>
+			<ul class="dotUl">
+				<%for(var j=0; j<(data.length > 4? 4 : data.length);j++){%>
+					<li></li>
 				<%}%>
 			</ul>
 		</script>
 		<script type="text/html" id="partsModel">
 			<%for(var i=0; i<data.length; i++){%>
 				<dl class="moveModel">
-					<dt><a href="#"><img <%=data[i].img%>/></a></dt>
+					<dt><a href="#"><img src="<%=data[i].img%>"/></a></dt>
 					<dd>
 						<div class="partsMes goodsMes">
 							<span><%=data[i].word%></span>
@@ -37,7 +42,7 @@
 			<div id="keyDiv">
 			</div>
 			<div class="banner comwid">
-				<ul class="imglist">
+				<!--<ul class="imglist">		使用模板及获得的资源进行加载
 					<li>
 						<img src="img/banner/6d5e0a40b0d40091fa80085a42014626.jpg"/>
 					</li>
@@ -50,12 +55,8 @@
 					<li>
 						<img src="img/banner/e5da8bd971958a5e1d64fdd74ed0ee78.jpg"/>
 					</li>
-				</ul>
-				<ul class="dotUl">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+				</ul>-->
+				
 			</ul>
 			</div>
 			<!--<div class="banner comwid">

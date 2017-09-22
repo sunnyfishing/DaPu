@@ -1,0 +1,70 @@
+{
+	"img" : {
+		"ban":[
+			{
+				"src" : "img/banner/ban2-1.jpg"
+			},
+			{
+				"src" : "img/banner/ban2-2.jpg"
+			},
+			{
+				"src" : "img/banner/ban2-3.jpg"
+			},
+			{
+				"src" : "img/banner/ban2-4.jpg"
+			}
+		],
+		"parts":[
+			{
+				"img" : "img/parts/parts1.png",
+				"word" : "Roome智能光瓶",
+				"rmb" : "RMB：199"
+			},
+			{
+				"img" : "img/parts/parts2.png",
+				"word" : "星球杯",
+				"rmb" : "RMB：99"
+			},
+			{
+				"img" : "img/parts/parts3.png",
+				"word" : "琢磨壶",
+				"rmb" : "RMB：458"
+			},
+			{
+				"img" : "img/parts/parts4.png",
+				"word" : "Oclean智能声波牙刷",
+				"rmb" : "RMB：399"
+			},
+			{
+				"img" : "img/parts/parts5.png",
+				"word" : "大朴亲子灯",
+				"rmb" : "RMB：99"
+			},
+			{
+				"img" : "img/parts/parts6.png",
+				"word" : "埃及长绒棉加厚款毛方浴套装",
+				"rmb" : "RMB：199"
+			},
+			{
+				"img" : "img/parts/parts7.png",
+				"word" : "斯里兰卡乳胶枕（面包款）",
+				"rmb" : "RMB：399"
+			},
+			{
+				"img" : "img/parts/parts8.png",
+				"word" : "斯里兰卡乳胶枕（波浪款）",
+				"rmb" : "RMB：399"
+			},
+			{
+				"img" : "img/parts/parts9.png",
+				"word" : "花鸟纯棉印花靠枕",
+				"rmb" : "RMB：99"
+			},
+			{
+				"img" : "img/parts/parts10.png",
+				"word" : "麻棉绣花外缝鞋",
+				"rmb" : "RMB：79"
+			}		
+		]
+	}
+}

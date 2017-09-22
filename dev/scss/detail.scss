@@ -16,6 +16,7 @@
 .main{
     height:512px;
     border: 1px solid #e6e6e6;
+    margin-bottom: 20px;
     .leftPic{
         width: 400px;
         height: 512px;
@@ -340,6 +341,7 @@
                 cursor: pointer;
             }
             .erweima{
+                z-index: 5;;
                 position: relative;
                 line-height: 30px;
                 width: 198px;
@@ -366,4 +368,140 @@
             }
         }
     }
+}
+.bottom{
+    .bottom-left{
+        height:4500px;
+        width:188px;
+        border: 1px solid #dcdcdc;
+        margin-right: 8px;
+        margin-top: 10px;
+    }
+    .bottom-right{
+       .rightTop{
+           height: 28px;
+           width: 1000px;
+           background: #FFFFFF;
+           border-bottom: 1px solid #DCDCDC;
+           padding-top: 10px;
+           span{
+               cursor: pointer;
+               font-weight: 600;
+               padding:0 14px ;
+               height: 28px;
+               line-height: 28px;
+               text-align: center;
+               font-size: 14px;
+           }
+           .goodsDetail{
+               margin-left: 38px;
+               background: url(../img/detail/tab-bg.png) 0 0 no-repeat;
+               background-size: 85px 532%;
+               position: relative;
+               i{
+                   z-index: 1;
+                   opacity: 1;
+                   position: absolute;
+                   padding-right: 3px;
+                   top:0;
+                   left:84px;
+                   width:90px ;
+                   height: 28px;
+                   background: url(../img/detail/tab-bg.png) 0 -40px no-repeat;
+                   background-size: 85px 532%;
+               }
+           }
+           .goodsServe{
+               margin-left: 3px;
+               background: url(../img/detail/tab-bg.png) 0 -80px no-repeat;
+           }
+           .goodsSay{
+               margin-left: 3px;
+               background: url(../img/detail/tab-bg.png) 0 -120px no-repeat;
+           }
+       }
+       .rightBottom{
+           width:960px;
+           border: 1px solid #DCDCDC;
+           padding:23px 0 0 38px;
+           .detailWord{
+               .detailWordDl{
+                   dt{
+                       height: 31px;
+                       width: 50px;
+                       line-height: 31px;
+                       font-weight: 600;
+                       color:#6B6B6B;
+                       margin-right: 30px;
+                   }
+                   dd{
+                       color:#6b6b6b;
+                        height: 31px;
+                        line-height: 31px;
+                        width: 600px;
+                   }
+               }
+           }
+           .detailPic{
+               div{
+                   width: 790px;
+               }
+               img{
+                   width: 100%;
+                   height: 100%;
+               }
+           }
+       }
+       .fir{
+           display: block;
+       }
+       .sec{
+           display: none;
+       }
+    }
+}
+
+
+.foot{
+    font-size: 10px;
+    height: 146px;
+    margin-top:57px;
+    text-align: center;
+    .weChat{
+        dl{
+            float: left;
+            margin:20px 90px;
+            dt{
+                width:120px;
+                height: 120px;
+            }
+            dd{
+                text-align: center;
+                margin-top: 9px;
+            }
+        }
+    }
+    
+    .footUl{
+        width: 360px;
+        margin:18px auto 0;
+        li{
+            text-align: center;
+            float: left;
+            width: 59px;
+            border-left:1px solid #222222 ;
+            a:hover{
+                text-decoration: underline;
+                color:#5F3F3F;
+            }
+        }
+        .footLi{
+            border: none;
+        }
+    }
+}
+.foot>span{
+    display: block;
+    height: 34px;
+    line-height: 34px;
 }

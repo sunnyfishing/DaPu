@@ -90,7 +90,7 @@ head.html 和 nav.html 中不能使用body,html,head之类的，使用一个大<
 
 4.在打开gulp时，当使用default的方式开启，就只需要在dos输入gulp即可
 
-5.在js里从css中获取定位之后的left和top的值
+5.在js里从css中获取定位之后的left和top的值			当元素隐藏时，获得的值为0！！！
 	只获取数值： var left = $('#test').position().left;
 	获取一个字符串：var left = $('#test').css('left');		这种方法也可以获取其他属性的值：var width = $('#test').css('width');
 
@@ -111,6 +111,32 @@ head.html 和 nav.html 中不能使用body,html,head之类的，使用一个大<
 
 10.!!!!!bug!!!!!!!!物品详情页的图片导航只有刚开始添加的那个ok，第二个，第三个添加的都有bug
 
+
+
+1.在访问Tomcat下WebApps下的文件时，不需要将项目转移到WebApps下的配置：http://jingyan.baidu.com/article/29697b913f4a29ab20de3cd9.html
+	
+2.json文件中如果要写路径的话，是基于网页上写的html调用的路径，也就是说如果使用testForJSON.html调用banner1.jpg这个图片，那么json数据文件中写的就是banner1.jpg相对于testForJSON.html的位置
+
+3.从json文件中获取到的数据只能在xhr.onload中使用，因为获取到的数据是最后调用的
+
+4.jsonp  利用script的src引入链接无跨域问题来访问其他资源。所以jsonp只能进行get而不能进行post
+	jsonp资源和json资源不同在于，jsonp资源是在json资源的外面加一个callback传递给的函数名，把json资源包起来，相当于执行callback函数，并将jsonp的资源当做参数传递。然后在代码中定义一个相同名的函数。
+	json中的资源样式：{"name":"sunny"}
+	jsonp中的资源样式：func1({"name":"sunny"})	其中func1是callback传递过去的值
+
+5.端口代理：如果想通过服务器调用自己电脑上的文件时，电脑就要开服务器，所以就需要使用8080端口开Tomcat服务器。需要通过gulp配置端口，将gulp端口改成其他的（gulpfile.js中靠上面的那块），将8080端口号用某个字符替换（靠下面那块）然后使用服务器时就使用：“/api/....”,使用gulp时就是“localhost:8000”
+
+6.当窗口中只有一半的banner图的时候，banner图更换时，窗口会返回到顶部，当可视窗口中没有banner图时就不会出现?????????
+
+7.通过jsonp读取本地资源的流程
+
+1.使用公用部分：
+	1.写一个html1页面，开始就直接用 div 包起来，里面写要添加的内容
+	2.在要添加的 html2 页面定义一个 div 给一个 id ，
+	3.在html2 的页面引入修饰html1 的css文件，
+	4.在要添加的页面的 js 文件中，使用    $("#id").load("html1相对于html2的位置",function(){这里面是html1的js代码，用的四load的回调函数});
+	5.如果html1中有js代码修饰，则将js代码使用 define 封装为一个接口，在config.js 中进行配置， 在 html1 的js代码中的 require 引入，并创建对象，对象用来在onload的回调函数中使用html1 的js 代码
+	
 
 
 

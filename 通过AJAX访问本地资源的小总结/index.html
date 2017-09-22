@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/html" id="partsModel">
+			<%for(var i=0; i<data.length; i++){%>
+				<dl class="moveModel">
+					<dt><a href="#"><img src="<%=data[i].img%>"/></a></dt>
+					<dd>
+						<div class="partsMes goodsMes">
+							<span><%=data[i].word%></span>
+							<span><%=data[i].rmb%></span>
+						</div>
+					</dd>
+				</dl>
+			<%}%>
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

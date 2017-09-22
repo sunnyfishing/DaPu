@@ -1,5 +1,5 @@
 require(["js/config"],function(m){
-	require(["jquery","headNav"],function($,headnav){
+	require(["jquery","headNav","textModel"],function($,headnav){
 		$(function(){
 			$("#headNav").load("html/head.html",function(){
 				headnav.headAndNav();
@@ -8,8 +8,12 @@ require(["js/config"],function(m){
 			$("#keyDiv").load("html/key.html",function(){
 			})
 			
+			$("#serve").onload("html/shouHou.html",function(){
+				
+			})
 			
 			var currentIndex = 0;
+			
 			var ulLength = $(".listDetail ul:first-child li").length;
 			
 /*---------------------默认选中第一张图片----------------*/			
@@ -21,6 +25,19 @@ require(["js/config"],function(m){
 																	//放大镜用
 			$(".picbig img").attr({src:defaultImg});
 			$(".picbig img").css({width:"350px",height:"350px"});
+																	//当更换颜色时，展示框的默认图片更改
+			$(".color li:nth-child(1)").click(function(){
+				var color1Img =  $(".listDetail ul:nth-child(1) li:first-child").find("img").attr("src");
+				$(".mainPic img").attr({src:color1Img});
+			})
+			$(".color li:nth-child(2)").click(function(){
+				var color2Img = $(".listDetail ul:nth-child(2) li:first-child").find("img").attr("src");
+				$(".mainPic img").attr({src:color2Img});
+			})
+			$(".color li:nth-child(3)").click(function(){
+				var color3Img = $(".listDetail ul:nth-child(3) li:first-child").find("img").attr("src");
+				$(".mainPic img").attr({src:color3Img});
+			})
 			
 /*---------------------鼠标hover 改变图片导航栏样式---------------------------------*/
 			//console.log($(".listDetail li").outerWidth(true))		//获取一个li所占的全部的宽度
@@ -60,6 +77,28 @@ require(["js/config"],function(m){
 				$(".cursmall").css({display:"none"});
 			})*/
 			
+			
+/*----------------------当只更换颜色按钮时，改变物品编号,并按照所选的颜色显示出对应的导航图片-----------------*/
+			$(".color li:nth-child(1)").click(function(){
+				$(".code i").html("1010201752");
+				$(".ul1").css({display:"block"});
+				$(".ul2").css({display:"none"});
+				$(".ul3").css({display:"none"});
+			})
+			$(".color li:nth-child(2)").click(function(){
+				$(".code i").html("1010201755");
+				$(".ul1").css({display:"none"});
+				$(".ul2").css({display:"block"});
+				$(".ul3").css({display:"none"});
+			})
+			$(".color li:nth-child(3)").click(function(){
+				$(".code i").html("1010201758");
+				$(".ul1").css({display:"none"});
+				$(".ul2").css({display:"none"});
+				$(".ul3").css({display:"block"});
+			})
+			
+			
 /*--------------------------点击左右按钮，导航图向左右滑动------------------------------------*/		
 			$(".ul1").css({display:"block"});									//将紫色默认为刚打开页面时的颜色
 			$(".ul2").css({display:"none"});
@@ -67,18 +106,29 @@ require(["js/config"],function(m){
 
 
 			$(".picSpan2").click(function(){
-				var left = $(".listDetail ul:first-child").position().left;		//ul的left值
+																//获得三个ul的left值		隐藏的元素通过下面的方法获得的值为0
+				var left1 = $(".listDetail ul:nth-child(1)").position().left;
+				var left2 = $(".listDetail ul:nth-child(2)").position().left;
+				var left3 = $(".listDetail ul:nth-child(3)").position().left;
+											//选出被选中的ul的left值，即最小值，因为其他为0 ，选中值为-280；
+				var left = Math.min(left1,left2,left3);
+				
+				var width0 = left1 == 0? (left2 == 0 ?(-$(".listDetail ul:nth-child(3)").width()+100) :(-$(".listDetail ul:nth-child(2)").width()+100)) :(-$(".listDetail ul:nth-child(1)").width()+100)
+				console.log(width0);
 				left-=$(".listDetail li").outerWidth(true)*5;		//每次点击，left都会减少 li的全部宽度*5
 				var leftMax = (-(ulLength)*$(".listDetail li").outerWidth(true));		//ul可移动的最大left值
-				console.log($(".listDetail ul").width());
-				if(left < leftMax){		//当点击	超出可视图片的长度时，，强制转换到最后一页
-					$(".listDetail ul").animate({left:(-$(".listDetail ul").width()+100)+"px"},500);
+				if(left < leftMax){					//当点击	超出可视图片的长度时，，强制转换到最后一页
+					$(".listDetail ul").animate({left:(width0+"px")},500);
 				}else{
 					$(".listDetail ul").animate({left:left+"px"},500);
 				}
 			})
 			$(".picSpan1").click(function(){
-				var left = $(".listDetail ul").position().left;
+				var left1 = $(".listDetail ul:nth-child(1)").position().left;
+				var left2 = $(".listDetail ul:nth-child(2)").position().left;
+				var left3 = $(".listDetail ul:nth-child(3)").position().left;
+				var left = Math.min(left1,left2,left3);
+				
 				left+=$(".listDetail li").outerWidth(true)*5;
 				if(left>=0){
 					$(".listDetail ul").animate({left:0+"px"},500);
@@ -94,9 +144,7 @@ require(["js/config"],function(m){
 			$(".color li:first-child").addClass("checked");						//添加标记class
 			$(".size li:first-child").css({border:"2px solid #b1544f"});		//给第一个尺寸初始选中的状态
 			$(".size li:first-child").find("i").css({display:"inline-block"});
-			$(".ul1").css({display:"block"});									//将紫色默认为刚打开页面时的颜色
-			$(".ul2").css({display:"none"});
-			$(".ul3").css({display:"none"});
+		
 			
 			
 			
@@ -128,25 +176,6 @@ require(["js/config"],function(m){
 				$(".size li:first-child").siblings().find("i").css({display:"none"});
 				$(".size li:first-child").css({border:"2px solid #b1544f"});			//给被选中的元素添加选中样式
 				$(".size li:first-child").find("i").css({display:"inline-block"});
-			})
-															//当只更换颜色按钮时，改变物品编号,并按照所选的颜色显示出对应的导航图片
-			$(".color li:nth-child(1)").click(function(){
-				$(".code i").html("1010201752");
-				$(".ul1").css({display:"block"});
-				$(".ul2").css({display:"none"});
-				$(".ul3").css({display:"none"});
-			})
-			$(".color li:nth-child(2)").click(function(){
-				$(".code i").html("1010201755");
-				$(".ul1").css({display:"none"});
-				$(".ul2").css({display:"block"});
-				$(".ul3").css({display:"none"});
-			})
-			$(".color li:nth-child(3)").click(function(){
-				$(".code i").html("1010201758");
-				$(".ul1").css({display:"none"});
-				$(".ul2").css({display:"none"});
-				$(".ul3").css({display:"block"});
 			})
 			
 								//显示当库存为0时的状态			bug带补充
@@ -247,6 +276,72 @@ require(["js/config"],function(m){
 			},function(){
 				$(".erweima2").css({display:"none"});
 			})
+		
+/*-----------------------------------------------物品详情--------------------------------------------*/		
+			
+	/*---------------------------滚动窗口，头部与评价的固定与隐藏------------------------------*/			
+			$(window).scroll(function(){
+				var scrtop = $(window).scrollTop();
+				if(scrtop > 530){
+					$("#headNav").css({display:"none"});
+					$(".rightTop").css({position:"fixed",top:"0px"});
+				}else{
+					$("#headNav").css({display:"block"});
+					$(".rightTop").css({position:"relative"});
+				}
+			})
+	/*--------------------------默认选中的是物品详情的页面---------------------------*/	
+			
+			
+	/*-------------------------点击第二个按钮时跳转到售后服务页面-------------------------*/		
+			$(".goodsServe").click(function(){
+				
+			})
+			
+	/*------------------------当点击第三个按钮时，跳转到用户评价页面---------------------*/		
+			$(".goodsSay").click(function(){
+				
+			})
+/*-----------------------------获得第一个按钮的内容-----------------------------------------*/			
+			var xhr = new XMLHttpRequest();
+			xhr.open("get","/api/DaPu/DaPubanner.json",true);
+			xhr.send();
+			xhr.onload = function(){
+				var detail = (JSON.parse(xhr.response)).detail.page1;		//{page1Word[],page1Pic[]}
+				//console.log(detail);
+				var word = detail.page1Word;
+				var pic = detail.page1Pic;
+				var text1 = template("detailWordModel", word);
+				var text2 = template("detailPicModel", pic);
+				
+				$(".detailWord").html(text1);
+				$(".detailPic").html(text2);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			$(".goodsDetail").click(function(){
+				
+			})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		});
