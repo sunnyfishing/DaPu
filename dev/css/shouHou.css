@@ -1,0 +1,31 @@
+.shouHou {
+  padding: 17px 0 40px 20px;
+  color: #6b6b6b;
+}
+.shouHou .sign {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.shouHou dt {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.shouHou dd {
+  height: 29px;
+  line-height: 29px;
+}
+.shouHou .tuiOK {
+  margin-bottom: 30px;
+}
+.shouHou p {
+  width: 740px;
+  height: 682px;
+}
+.shouHou p img {
+  width: 100%;
+  height: 100%;
+}
+.shouHou b {
+  font-weight: 600;
+  color: #000000;
+}

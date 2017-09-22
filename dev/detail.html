@@ -6,20 +6,31 @@
 		<link rel="stylesheet" type="text/css" href="css/com.css"/>
 		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
 		<link rel="stylesheet" type="text/css" href="css/headNavFixed.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shouHou.css"/>
 		<script src="js/require.js" type="text/javascript" data-main = "detail.js" charset="utf-8"></script>
-		<script id="detailWordModel" type="text/javascript">
-			<%for(var i=0; i<data.length; i++){%>
+		<script id="detailWordModel" type="text/html">
+			<% for(var i=0; i<data.length; i++){ %>
 				<dl class="detailWordDl clear">
 					<dt class="fl"><%=data[i].word1%></dt>
 					<dd class="fl"><%=data[i].word2%></dd>
 				</dl>
-			<%}%>
+			<% } %>
 		</script>
-		<script id="detailPicModel" type="text/javascript">
-			<%for(var i=0; i<data.length; i++){%>
+		<script id="detailPicModel" type="text/html">
+			<% for(var i=0; i<data.length; i++){ %>
 				<div class="clear">
-					<img src="<%=data[i].src%>"/>
+					<img src="<%= data[i].src %>"/>
 				</div>
+			<% } %>
+		</script>
+		<script id="user" type="text/html">
+			<% for(var i=0; i<data.length; i++){%>
+				<dl>
+					<dt><%= data[i].user %></dt>
+					<dd class="userv clear"><%= data[i].mes %></dd>
+					<dd class="resv"><%= data[i].rev %></dd>
+					<dd class="time"><%= data[i].time %></dd>
+				</dl>
 			<%}%>
 		</script>
 	</head>
@@ -183,9 +194,8 @@
 				</div>
 				<div class="sec rightBottom clear">
 					<!--关于售后方面的，可以做一个公用的模块-->
-					<div id="serve">
-						
-					</div>
+					<div id="serve"></div>
+					
 					<div class="detailWord clear">
 						
 					</div>
@@ -195,7 +205,7 @@
 				</div>
 				<div class="thr rightBottom clear">
 					<!--用户评论模块可以用json文件直接导入-->
-					<div class="">
+					<div class="userIdea">
 						
 					</div>
 					<div class="detailWord clear">

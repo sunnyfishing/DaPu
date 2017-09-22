@@ -393,7 +393,6 @@
 .bottom .bottom-right .rightTop .goodsDetail {
   margin-left: 38px;
   background: url(../img/detail/tab-bg.png) 0 0 no-repeat;
-  background-size: 85px 532%;
   position: relative;
 }
 .bottom .bottom-right .rightTop .goodsDetail i {
@@ -447,6 +446,31 @@
 }
 .bottom .bottom-right .sec {
   display: none;
+}
+
+.userIdea {
+  padding-top: 30px;
+  width: 930px;
+  color: #6b6b6b;
+  margin-bottom: 100px;
+}
+.userIdea dt {
+  margin-bottom: 10px;
+}
+.userIdea .userv {
+  width: 926px;
+  border: 1px solid #dedede;
+  padding: 17px 0;
+  text-indent: 16px;
+}
+.userIdea .resv {
+  margin-top: 10px;
+  margin-bottom: 21px;
+}
+.userIdea .time {
+  height: 10px;
+  width: 930px;
+  text-align: right;
 }
 
 .foot {

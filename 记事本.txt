@@ -136,13 +136,18 @@ head.html 和 nav.html 中不能使用body,html,head之类的，使用一个大<
 	3.在html2 的页面引入修饰html1 的css文件，
 	4.在要添加的页面的 js 文件中，使用    $("#id").load("html1相对于html2的位置",function(){这里面是html1的js代码，用的四load的回调函数});
 	5.如果html1中有js代码修饰，则将js代码使用 define 封装为一个接口，在config.js 中进行配置， 在 html1 的js代码中的 require 引入，并创建对象，对象用来在onload的回调函数中使用html1 的js 代码
-	
+	6.html1中若是有需要链接，比如图片地址的，以html2所在位置为基础进行查询路径
 
+2.[0]是dom对象获取数组子元素的方法，因此会使jQuery对象变成dom对象，使用.children/.find()获取子元素
 
+cookie
+1.从cookie中获取的都是字符串，在和从页面上获得的内容或js中计算得到的内容进行对比时，记得更换类型
 
+2.
 
-
-
+3.点击跳转：js方法：
+	给DOM元素一个点击事件，window.location = "xxx", xxx为当前的目标html页面相对于当前的html页面的路径
+	localhost:8000指到dev的路径，所以如果是在dev下进行互相切换页面，只需要写dev下的路径，因为地址栏中的路径也会跳转到相应的页面
 
 
 

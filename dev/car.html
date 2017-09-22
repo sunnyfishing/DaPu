@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/car.css"/>
+		<link rel="stylesheet" type="text/css" href="css/com.css"/>
+		<script src="js/require.js" type="text/javascript" data-main = "car.js" charset="utf-8"></script>
+	</head>
+	<script type="text/html" id="like">
+		<% for(var i=0; i<data.length; i++){ %>
+			<dl class="clear">
+				<dt> <a href="#"> <img src="<%=data[i].src%>"> </a> </dt>
+				<dd class="dd1"> <a href="#"> <%=data[i].link%> </a> </dd>
+				<dd class="dd2"> <%=data[i].price%> </dd>			
+			</dl>
+		<%}%>	
+	</script>
+	
+	<script id="tab_td" type="text/html">
+		<tr>
+			<th class="th1"><input type="checkbox" checked="checked" /></th>
+			<th class="th2"><span>商品信息</span></th>
+			<th class="th3"><span>商品单价</span></th>
+			<th class="th4"><span>商品数量</span></th>
+			<th class="th5"><span>小计</span></th>
+			<th class="th6"><span>操作</span></th>
+		</tr>
+				
+		<% for(var i=0; i<data.length; i++){ %>
+			<tr>
+				<td class="td1"> 
+					<input type="checkbox" checked="checked" /> 
+				</td>
+				<td class="td2">
+					<img class="fl" src="<%=data[i].src%>">
+					<a href="#" class="fl td2Name"><%=data[i].goodsName%></a>
+					<span class="fl td2Color"><i>颜色:</i><b><%=data[i].color%></b></span>,
+					<span class="fl td2Size"><i>尺寸:</i><b><%=data[i].size%></b></span>
+				</td>
+				<td class="td3 td3Price"><%=data[i].price%> </td>
+				<td class="td4">
+					<a href="#" class="down">-</a>
+					
+					<input class="count_input" type="text" value="<%= data[i].count%>"/>
+					<a href="#" class="up">+</a>
+				</td>
+				<td class="td5"></td>
+				<td class="td6"><button>删除</button></td>
+			</tr>
+		<% } %>
+	</script>
+	<body>
+		<div class="head comwid clear">
+			<div class="head_logo fl">
+				<img src="img/car/logo.png" />
+			</div>
+			<span class="fl">无甲醇棉品，始于大朴</span>
+		</div>
+		<div class="main clear comwid">
+			<div class="mycar clear">
+				<span>我的购物车</span>
+				<a href="#" class="fr clearAll">清空购物车</a>
+			</div>
+			
+			<table class="goodstable" cellspacing="0">
+				
+			</table>
+			
+			<div class="cont clear">
+				<span>购物车为空</span>
+				<a href="#">继续购物</a>
+			</div>
+			
+			<div class="goods">
+				<div class="deta">
+					
+				</div>
+				<div class="discount">
+					
+				</div>
+			</div>
+			
+			<div class="listTitle">
+				<span>您可能会喜欢</span>
+			</div>
+			<div class="list">
+				
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<!--promise-->

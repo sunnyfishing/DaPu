@@ -396,7 +396,6 @@
            .goodsDetail{
                margin-left: 38px;
                background: url(../img/detail/tab-bg.png) 0 0 no-repeat;
-               background-size: 85px 532%;
                position: relative;
                i{
                    z-index: 1;
@@ -458,6 +457,31 @@
        .sec{
            display: none;
        }
+    }
+}
+
+.userIdea{
+    padding-top: 30px;
+    width: 930px;
+    color:#6b6b6b;
+    margin-bottom: 100px;
+    dt{
+        margin-bottom: 10px;
+    }
+    .userv{
+        width: 926px;
+        border: 1px solid #dedede;
+        padding:17px 0;
+        text-indent: 16px;
+    }
+    .resv{
+        margin-top: 10px;
+        margin-bottom: 21px;
+    }
+    .time{
+        height: 10px;
+        width: 930px;
+        text-align: right;
     }
 }
 

@@ -116,10 +116,18 @@ define(["jquery","common"],function($){
 					$(".nav").removeClass("headforfixed navforfixed");
 				}
 			})
-		}),
-		fixed:(function(){
+			var cook = JSON.parse(cookie.get("good"));
+			var num = cook.length;
+			$(".goodsNum").text(num);
 			
-		})
+/*-----------------------------------添加跳转----------------------------*/			
+			$("#shopCar").click(function(){
+				window.location="../car.html";
+			})
+			$(".logoA").click(function(){
+				window.location = "../index.html";
+			})
+		}),
 	}
 })
 //作为接口

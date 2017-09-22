@@ -1,5 +1,216 @@
-#box3 {
-  width: 200px;
-  height: 100px;
-  background: red;
+.head {
+  width: 1200px;
+  padding: 25px 0 16px 0;
+}
+.head .head_logo {
+  height: 49px;
+  width: 245px;
+}
+.head .head_logo img {
+  width: 100%;
+  height: 100%;
+}
+.head span {
+  margin: 26px 0 0 103px;
+  font-size: 18px;
+  color: #b3a99f;
+  font-weight: 600;
+}
+
+.main {
+  width: 1200px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+.main .mycar {
+  padding: 14px 15px;
+  width: 1170px;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 600;
+}
+.main .mycar a {
+  display: block;
+  height: 28px;
+  width: 94px;
+  background: #e6e6e6;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 28px;
+}
+.main .mycar a:hover {
+  background: #D1D0D0;
+}
+.main .goodstable {
+  border-left: 1px solid #DCDCDC;
+  border-top: 1px solid #DCDCDC;
+  margin: 15px;
+}
+.main .goodstable tr {
+  height: 36px;
+  line-height: 36px;
+}
+.main .goodstable th {
+  border-right: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+.main .goodstable th span {
+  float: left;
+  font-weight: 600;
+  text-indent: 9px;
+}
+.main .goodstable .th1 {
+  display: inline-block;
+  width: 63px;
+}
+.main .goodstable .th2 {
+  width: 518px;
+}
+.main .goodstable .th3 {
+  width: 128px;
+}
+.main .goodstable .th4 {
+  width: 194px;
+}
+.main .goodstable .th5 {
+  width: 129px;
+}
+.main .goodstable .th6 {
+  width: 129px;
+}
+.main .goodstable td {
+  text-indent: 9px;
+  border-right: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+.main .goodstable .td2 {
+  padding: 8px;
+  height: 96px;
+}
+.main .goodstable .td2 img {
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+}
+.main .goodstable .td2 a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0088cc;
+  width: 400px;
+}
+.main .goodstable .td2 span {
+  color: #808080;
+}
+.main .goodstable .td3 {
+  line-height: 96px;
+}
+.main .goodstable .td4 a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.main .goodstable .td4 input {
+  vertical-align: top;
+  width: 42px;
+  height: 28px;
+  border: 1px solid #DCDCDC;
+  margin-right: 3px;
+}
+.main .goodstable .td6 button {
+  width: 52px;
+  height: 28px;
+  border: 1px solid #c44742;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background: #df534e;
+}
+.main .cont {
+  display: none;
+  width: 1200px;
+  border-top: 0;
+}
+.main .cont span {
+  display: block;
+  width: 1200px;
+  height: 214px;
+  line-height: 214px;
+  text-align: center;
+  font-size: 30px;
+}
+.main .cont a {
+  display: block;
+  height: 28px;
+  width: 80px;
+  line-height: 28px;
+  margin-left: 558px;
+  margin-bottom: 95px;
+  text-align: center;
+  color: #FFFFFF;
+  border: 1px solid #429db8;
+  border-radius: 5px;
+  background: #41a7c5;
+}
+.main .cont a:hover {
+  background: #204D74;
+}
+.main .listTitle {
+  height: 28;
+  width: 1164px;
+  padding-left: 38px;
+  border-bottom: 1px solid #dad9d8;
+}
+.main .listTitle span {
+  line-height: 28px;
+  height: 28px;
+  text-align: center;
+  width: 112px;
+  background: url(../img/detail/tab-bg.png) 0 0 no-repeat;
+  background-size: 112px 505%;
+  display: inline-block;
+}
+.main .list {
+  height: 240px;
+  width: 1120px;
+  padding: 22px 0 0 40px;
+}
+.main .list dl {
+  width: 162px;
+  float: left;
+  margin-right: 24px;
+}
+.main .list dl dt {
+  width: 165px;
+  height: 165px;
+}
+.main .list dl dt img {
+  width: 100%;
+  height: 100%;
+}
+.main .list dl .dd1 {
+  margin-top: 5px;
+  width: 165px;
+  height: 40px;
+  line-height: 20px;
+}
+.main .list dl .dd1 a {
+  color: #0097db;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.main .list dl .dd1 a:hover {
+  text-decoration: underline;
+}
+.main .list dl .dd2 {
+  width: 165px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #7f5b42;
 }

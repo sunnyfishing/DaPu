@@ -6,9 +6,9 @@ require(["js/config"],function(m){
 			});
 			
 			$("#keyDiv").load("html/key.html",function(){
-			})
+			});
 			
-			$("#serve").onload("html/shouHou.html",function(){
+			$("#serve").load("html/shouHou.html",function(){
 				
 			})
 			
@@ -17,11 +17,13 @@ require(["js/config"],function(m){
 			var ulLength = $(".listDetail ul:first-child li").length;
 			
 /*---------------------默认选中第一张图片----------------*/			
+			var checkedImg = "";
 			
 			$(".listDetail li:first-child").find("span").css({display:"block"});
 			var defaultImg = $(".listDetail li:first-child").find("img").attr("src");
 			$(".mainPic img").attr({src:defaultImg});
 			$(".mainPic img").css({width:"350px",height:"350px"});
+			checkedImg = defaultImg;
 																	//放大镜用
 			$(".picbig img").attr({src:defaultImg});
 			$(".picbig img").css({width:"350px",height:"350px"});
@@ -29,15 +31,20 @@ require(["js/config"],function(m){
 			$(".color li:nth-child(1)").click(function(){
 				var color1Img =  $(".listDetail ul:nth-child(1) li:first-child").find("img").attr("src");
 				$(".mainPic img").attr({src:color1Img});
+				checkedImg = color1Img;
 			})
 			$(".color li:nth-child(2)").click(function(){
 				var color2Img = $(".listDetail ul:nth-child(2) li:first-child").find("img").attr("src");
 				$(".mainPic img").attr({src:color2Img});
+				checkedImg = color2Img;
 			})
 			$(".color li:nth-child(3)").click(function(){
 				var color3Img = $(".listDetail ul:nth-child(3) li:first-child").find("img").attr("src");
 				$(".mainPic img").attr({src:color3Img});
+				checkedImg = color3Img;
 			})
+			
+			$(".color li:nth-child(1)").addClass("imgChecked");		//给默认选中的图片加上一个imgChecked的class名
 			
 /*---------------------鼠标hover 改变图片导航栏样式---------------------------------*/
 			//console.log($(".listDetail li").outerWidth(true))		//获取一个li所占的全部的宽度
@@ -80,18 +87,24 @@ require(["js/config"],function(m){
 			
 /*----------------------当只更换颜色按钮时，改变物品编号,并按照所选的颜色显示出对应的导航图片-----------------*/
 			$(".color li:nth-child(1)").click(function(){
+				$(".color li:nth-child(1)").siblings().removeClass("imgChecked");
+				$(".color li:nth-child(1)").addClass("imgChecked");
 				$(".code i").html("1010201752");
 				$(".ul1").css({display:"block"});
 				$(".ul2").css({display:"none"});
 				$(".ul3").css({display:"none"});
 			})
 			$(".color li:nth-child(2)").click(function(){
+				$(".color li:nth-child(2)").siblings().removeClass("imgChecked");
+				$(".color li:nth-child(2)").addClass("imgChecked");
 				$(".code i").html("1010201755");
 				$(".ul1").css({display:"none"});
 				$(".ul2").css({display:"block"});
 				$(".ul3").css({display:"none"});
 			})
 			$(".color li:nth-child(3)").click(function(){
+				$(".color li:nth-child(3)").siblings().removeClass("imgChecked");
+				$(".color li:nth-child(3)").addClass("imgChecked");
 				$(".code i").html("1010201758");
 				$(".ul1").css({display:"none"});
 				$(".ul2").css({display:"none"});
@@ -144,7 +157,7 @@ require(["js/config"],function(m){
 			$(".color li:first-child").addClass("checked");						//添加标记class
 			$(".size li:first-child").css({border:"2px solid #b1544f"});		//给第一个尺寸初始选中的状态
 			$(".size li:first-child").find("i").css({display:"inline-block"});
-		
+			$(".size li:nth-child(1)").addClass("btnChecked");
 			
 			
 			
@@ -197,6 +210,8 @@ require(["js/config"],function(m){
 			})
 								//点击第一个尺寸按钮
 			$(".size li:nth-child(1)").click(function(){
+				$(".size li:nth-child(1)").siblings().removeClass("btnChecked");
+				$(".size li:nth-child(1)").addClass("btnChecked");
 				$this = $(this);
 				if($(".color li:nth-child(1)").hasClass("checked")){			//	如果颜色选择的是紫色
 					$(".code i").html("1010201752");
@@ -209,6 +224,8 @@ require(["js/config"],function(m){
 								//点击第二个尺寸按钮
 			$(".size li:nth-child(2)").click(function(){
 				$this = $(this);
+				$(".size li:nth-child(2)").siblings().removeClass("btnChecked");
+				$(".size li:nth-child(2)").addClass("btnChecked");
 				if($(".color li:nth-child(1)").hasClass("checked")){			//	如果颜色选择的是紫色
 					$(".code i").html("1010201753");
 				}else if($(".color li:nth-child(2)").hasClass("checked")){		//	如果颜色选择的是红色
@@ -220,6 +237,8 @@ require(["js/config"],function(m){
 								//点击第三个尺寸按钮
 			$(".size li:nth-child(3)").click(function(){
 				$this = $(this);
+				$(".size li:nth-child(3)").siblings().removeClass("btnChecked");
+				$(".size li:nth-child(3)").addClass("btnChecked");
 				if($(".color li:nth-child(1)").hasClass("checked")){			//	如果颜色选择的是紫色
 					$(".code i").html("1010201754");
 				}else if($(".color li:nth-child(2)").hasClass("checked")){		//	如果颜色选择的是红色
@@ -291,18 +310,42 @@ require(["js/config"],function(m){
 				}
 			})
 	/*--------------------------默认选中的是物品详情的页面---------------------------*/	
-			
+			$(".fir").css({display:"block"});
+			$(".thr").css({display:"none"});
+			$(".sec").css({display:"none"});
+	/*------------------------点击第一个按钮时调转到物品详情处----------------*/			
+			$(".goodsDetail").click(function(){
+				$this = $(this);
+				$this.css({"background-position":"0 0"});
+				$this.siblings().css({"background-position":"0 -80px"});
+				$("body","html").animate({ scrollTop:"540px"});
+				$(".fir").css({display:"block"});
+				$(".thr").css({display:"none"});
+				$(".sec").css({display:"none"});
+			})
 			
 	/*-------------------------点击第二个按钮时跳转到售后服务页面-------------------------*/		
 			$(".goodsServe").click(function(){
-				
+				$this = $(this);
+				$this.css({"background-position":"0 0px"});
+				$this.siblings().css({"background-position":"0 -80px"});
+				$("body","html").animate({ scrollTop:"540px"});
+				$(".sec").css({display:"block"});
+				$(".fir").css({display:"none"});
+				$(".thr").css({display:"none"});
 			})
 			
 	/*------------------------当点击第三个按钮时，跳转到用户评价页面---------------------*/		
 			$(".goodsSay").click(function(){
-				
+				$this = $(this);
+				$this.css({"background-position":"0 0"});
+				$this.siblings().css({"background-position":"0 -80px"});
+				$("body","html").animate({ scrollTop:"540px"});
+				$(".thr").css({display:"block"});
+				$(".fir").css({display:"none"});
+				$(".sec").css({display:"none"});
 			})
-/*-----------------------------获得第一个按钮的内容-----------------------------------------*/			
+/*-----------------------------获得第一个按钮的内容,即物品详情-----------------------------------------*/			
 			var xhr = new XMLHttpRequest();
 			xhr.open("get","/api/DaPu/DaPubanner.json",true);
 			xhr.send();
@@ -317,32 +360,58 @@ require(["js/config"],function(m){
 				$(".detailWord").html(text1);
 				$(".detailPic").html(text2);
 			}
+/*-------------------------------------获得用户评论------------------------------*/			
+			//console.log("ok");
+			$.ajax({url:"/api/DaPu/DaPubanner.json",success:function(data){		//使用$ajax请求数据，里面是一个对象，包括url，成功返回后的回调函数
+				var useridea= data.usermes.user;		//获取到user数组
+				var text = template("user",useridea);
+				$(".userIdea").html(text);
+			}});
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			$(".goodsDetail").click(function(){
+/*-----------------------------点击购物车，将商品信息加入cookie--------------------------------*/
+		//如何在多个li中确定那个li有checked类名
+			$(".car").click(function(){
+				var $ul =  $(".color ul li").filter(function(){
+					return $(this).hasClass("imgChecked");
+				});
+				var $li = $ul.children(0);				//[0]是dom对象获取数组子元素的方法，因此会使jQuery对象变成dom对象，使用。children获取子元素
 				
+				var $size = $(".size ul li").filter(function(){
+					return $(this).hasClass("btnChecked");
+				})
+				var $sizeLi = $size.children(0);
+				var goodName = $(".title").text();
+				
+				var good={
+					src : checkedImg,
+					goodsName : goodName,
+					color : $li.text(),
+					size : $sizeLi.text(),
+					price :"699",
+					totel:"699"
+				}
+				var goodArr = null;
+				if(JSON.parse(cookie.get("good")) == "" || JSON.parse(cookie.get("good")) == null ){
+					goodArr=[];
+				}else{
+					goodArr = JSON.parse(cookie.get("good"));
+				}
+			
+				var isSame = goodArr.filter(function(item){
+					return item.img == good.img && item.name == good.name && item.color == good.color && item.size == good.size;
+				})
+				if(isSame.length > 0){
+					isSame[0].count++;
+				}else{
+					good.count = 1;
+					goodArr.push(good);
+				}
+				cookie.set("good",JSON.stringify(goodArr),"8","/");
+				window.location = "./car.html";
 			})
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
+			
+			
 		
 		});
 	});
